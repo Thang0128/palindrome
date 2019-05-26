@@ -4,4 +4,6 @@ function palindrome(word) {
 	console.log(word);
 }
 
-palindrome("racecar");
+if (true) {
+  
+}
