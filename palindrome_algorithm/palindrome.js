@@ -17,5 +17,4 @@ function palindrome(word) {
 	}
 	return true;
 }
-
-console.assert(palindrome("racecar"));
+module.exports = palindrome;
