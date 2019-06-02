@@ -1,6 +1,6 @@
 /*
 	1. what happens and why? 
-	2. how do we get the a to print undefined
+	2. how do we get the a to print undefined without removing 'a = 5', and without explicitly assign 'a = undefined'
 */
 function problem1() {
     if(true) {
