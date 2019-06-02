@@ -4,18 +4,21 @@
 	<meta charset="UTF-8">
 	<title>Palindrome</title>
 	<style>
-		.block-element {
-			display: block;
+
+		.palindrome-container{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
+
 	</style>
 </head>
 <body>
-	<form class="" action="index.html" method="post">
-			<label for="palindrome-canditate">palindrome canditate</label>
-			<input type="text" name="palindrome-canditate" placeholder="racecar">
-			<input class="block-element" type="submit" name="submit-palindrome">
-			<textarea class="block-element" name="list-of-palindrome" rows="8" cols="80"></textarea>
-	</form>
-
+		<form class="palindrome-container" action="index.html" method="post">
+				<label for="palindrome-canditate">palindrome canditate</label>
+				<input type="text" name="palindrome-canditate" placeholder="racecar">
+				<input type="submit" name="submit-palindrome">
+				<textarea name="list-of-palindrome" rows="8" cols="80"></textarea>
+		</form>
 </body>
 </html>
