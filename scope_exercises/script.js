@@ -6,8 +6,9 @@
 function problem1() {
     if(true) {
     	// local block scope
-        var a = 5;
+        let a = 5;
     }
+    var a;
     console.log(a);
 }
 problem1();
