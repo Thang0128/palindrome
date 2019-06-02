@@ -24,7 +24,7 @@ function problem2() {
 problem2();
 console.assert(a === 3);
 
-var a;
+var a = 10;
 function problem3() {
     a = 4;
     console.log(a);
