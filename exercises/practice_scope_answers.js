@@ -12,3 +12,20 @@ function problem1() {
     console.log(a);
 }
 problem1();
+
+/*
+	1. what scope does the 'a' variable live in?
+	2. prove that function problem2 & problem3 reference the same variable.
+*/
+function problem2() {
+    a = 3;
+    console.log(a);
+}
+problem2();
+
+var a;
+function problem3() {
+    a = 4;
+    console.log(a);
+}
+problem3();
