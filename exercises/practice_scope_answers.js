@@ -78,4 +78,4 @@ function funcWithAnonymousFunctionInside() {
     }
 }
 var f = funcWithAnonymousFunctionInside();
-console.assert(f(0) === 12);
+console.assert(f(5) === 12);
