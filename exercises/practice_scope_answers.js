@@ -52,9 +52,9 @@ second();
 */
 var c = 6;
 function test() {
-    var c = 7;
+     c = 7;
     function again() {
-        var c = 8;
+        let c = 8;
         console.log(c);  // First
     }
     again();
