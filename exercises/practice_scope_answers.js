@@ -46,3 +46,19 @@ function second() {
 }
 first();
 second();
+
+/*
+	1. make the assertion below pass
+*/
+var c = 6;
+function test() {
+    var c = 7;
+    function again() {
+        var c = 8;
+        console.log(c);  // First
+    }
+    again();
+    console.log(c);  // Second
+}
+test();
+console.assert(c === 7); // third
