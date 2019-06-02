@@ -62,3 +62,20 @@ function test() {
 }
 test();
 console.assert(c === 7); // third
+
+/*
+ var a actually persists because of a concept called "closure".
+ Because a is referenced inside the anonymous function, a is now inside
+ the scope of that anonymous function.
+ 1. read about closures: https://www.w3schools.com/js/js_function_closures.asp
+ 2. read about anonymous functions: https://www.w3schools.com/js/js_function_definition.asp
+ 2. make the assertion below pass
+*/
+function funcWithAnonymousFunctionInside() {
+    var a = 7;
+    return function(b) {
+        return a+b
+    }
+}
+var f = funcWithAnonymousFunctionInside();
+console.assert(f(0) === 12);
