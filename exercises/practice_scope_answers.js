@@ -31,3 +31,17 @@ function problem3() {
 }
 problem3();
 console.assert(a === 4);
+
+/*
+	1. must implement first() to prevent the error from throwing in second()
+*/
+var b = 5;
+function first() {
+	// write code here
+}
+
+function second() {
+	if (b !== 6) throw new Error('fix me');
+}
+first();
+second();
