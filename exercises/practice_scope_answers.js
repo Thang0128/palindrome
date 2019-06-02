@@ -38,6 +38,7 @@ console.assert(a === 4);
 var b = 5;
 function first() {
 	// write code here
+  b = 6;
 }
 
 function second() {
