@@ -1,0 +1,11 @@
+.center-children{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left-children{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
