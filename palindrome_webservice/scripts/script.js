@@ -14,5 +14,10 @@ form.addEventListener('submit', (event) => {
   let palindromeCanditateInput = document.querySelector('#palindrome-canditate-input');
   let palindromeCanditate = palindromeCanditateInput.value
   let isItPalindrome = palindrome(palindromeCanditate);
-  console.log(isItPalindrome);
+  if(isItPalindrome){
+    let palindromeTextArea = document.querySelector('#palindrome-textarea');
+    palindromeTextArea.value = palindromeCanditate;
+  }else{
+    alert("This word is not a palindrome");
+  }
 });
