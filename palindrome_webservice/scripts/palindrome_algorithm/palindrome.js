@@ -17,4 +17,15 @@ function palindrome(word) {
 	}
 	return true;
 }
-module.exports = palindrome;
+
+/*
+	node process does not have a window object
+	if not window, then load as a node module
+*/
+if (!window) {
+	// loading as a node module
+	module.exports = palindrome;
+} else {
+	// loading in the browser
+	console.log('loading palindrome function...');
+}
