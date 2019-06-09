@@ -5,20 +5,28 @@
 	<title>Palindrome</title>
 	<style>
 
-		.palindrome-container{
+		.center-children{
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 		}
 
+		.left-children{
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+		}
+
 	</style>
 </head>
 <body>
-		<form class="palindrome-container" action="index.html" method="post">
+		<form class="center-children" action="index.html" method="post">
 				<label for="palindrome-canditate">palindrome canditate</label>
-				<input type="text" name="palindrome-canditate" placeholder="racecar">
-				<input type="submit" name="submit-palindrome">
-				<textarea name="list-of-palindrome" rows="8" cols="80"></textarea>
+				<div class="left-children">
+					<input type="text" name="palindrome-canditate" placeholder="racecar">
+					<input type="submit" name="submit-palindrome">
+					<textarea name="list-of-palindrome" rows="8" cols="80"></textarea>
+				</div>
 		</form>
 </body>
 </html>
