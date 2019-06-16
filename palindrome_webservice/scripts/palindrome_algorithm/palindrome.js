@@ -6,11 +6,11 @@
 
 function wordRule(word){
 	let pattern = /[a-zA-Z]{2,}/
-	assert.notEqual(word.match(pattern), null)
+	return word.match(pattern)
 }
 
 function palindrome(word) {
-	if(wordRule !== null){
+	if(wordRule(word) === null){
 		return false;
 	}else{
 		let a = word.length;
