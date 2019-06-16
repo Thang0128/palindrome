@@ -6,11 +6,11 @@
 
 function wordRule(word){
 	let pattern = /[a-zA-Z]{2,}/
-	assert.notEqual(word.match(pattern), null)
+	return word.match(pattern)
 }
 
 function palindrome(word) {
-	if(wordRule !== null){
+	if(wordRule(word) === null){
 		return false;
 	}else{
 		let a = word.length;
@@ -28,14 +28,16 @@ function palindrome(word) {
 	}
 }
 
+	module.exports = palindrome;
+
 /*
 	node process does not have a window object
 	if not window, then load as a node module
 */
-if (!window) {
+/*if (!window) {
 	// loading as a node module
 	module.exports = palindrome;
 } else {
 	// loading in the browser
 	console.log('loading palindrome function...');
-}
+}*/
