@@ -29,10 +29,9 @@ function palindrome(word) {
 }
 
 /*
-	node process does not have a window object
-	if not window, then load as a node module
+	export if node process
 */
-if (!window) {
+if(typeof process === 'object') {
 	// loading as a node module
 	module.exports = palindrome;
 } else {
