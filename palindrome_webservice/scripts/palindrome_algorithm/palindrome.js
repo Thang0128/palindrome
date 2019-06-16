@@ -1,13 +1,5 @@
-/*
- write function as a failing test.
- test only passes when you implement
- correct logic.
-*/
-
-function wordRule(word){
-	let pattern = /[a-zA-Z]{2,}/
-	return word.match(pattern)
-}
+const isNodeProcess = require('../lib.js');
+const wordRule = require('../regex.js');
 
 function palindrome(word) {
 	if(wordRule(word) === null){
@@ -28,16 +20,14 @@ function palindrome(word) {
 	}
 }
 
-	module.exports = palindrome;
-
 /*
-	node process does not have a window object
-	if not window, then load as a node module
+	export if node process
 */
-/*if (!window) {
+
+if(isNodeProcess()) {
 	// loading as a node module
 	module.exports = palindrome;
 } else {
 	// loading in the browser
 	console.log('loading palindrome function...');
-}*/
+}
