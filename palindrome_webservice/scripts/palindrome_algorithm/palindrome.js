@@ -1,8 +1,4 @@
-/*
- write function as a failing test.
- test only passes when you implement
- correct logic.
-*/
+const isNodeProcess = require('../lib.js');
 
 function wordRule(word){
 	let pattern = /[a-zA-Z]{2,}/
@@ -31,7 +27,8 @@ function palindrome(word) {
 /*
 	export if node process
 */
-if(typeof process === 'object') {
+
+if(isNodeProcess()) {
 	// loading as a node module
 	module.exports = palindrome;
 } else {
