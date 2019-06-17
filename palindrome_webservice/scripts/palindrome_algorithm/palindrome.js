@@ -1,5 +1,8 @@
-const isNodeProcess = require('../lib.js');
-const wordRule = require('../regex.js');
+// running as a node module
+if(typeof process === 'object') {
+	var wordRule = require('../lib.js');
+	module.exports = palindrome;
+}
 
 function palindrome(word) {
 	if(wordRule(word) === null){
@@ -18,16 +21,4 @@ function palindrome(word) {
 		}
 		return true;
 	}
-}
-
-/*
-	export if node process
-*/
-
-if(isNodeProcess()) {
-	// loading as a node module
-	module.exports = palindrome;
-} else {
-	// loading in the browser
-	console.log('loading palindrome function...');
 }
