@@ -1,4 +1,11 @@
 console.log('loading scripts...');
+let palindromeTextArea = document.querySelector('#palindrome-textarea');
+
+fetch('http://localhost:3000/api/palindromeRouter')
+.then(response => response.json())
+.then(jsonResponse => {
+    palindromeTextArea.value = jsonResponse.palindrome.join('');
+});
 
 /*
 1. get a refefence to the form element in the dom
@@ -15,8 +22,8 @@ form.addEventListener('submit', (event) => {
   let palindromeCanditate = palindromeCanditateInput.value
   let isItPalindrome = palindrome(palindromeCanditate);
   if(isItPalindrome){
-    let palindromeTextArea = document.querySelector('#palindrome-textarea');
     palindromeTextArea.value = palindromeCanditate.concat('\n', palindromeTextArea.value);
   }else{
     alert("This word is not a palindrome");
   }
+})
