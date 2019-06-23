@@ -16,7 +16,7 @@ form.addEventListener('submit', (event) => {
   let isItPalindrome = palindrome(palindromeCanditate);
   if(isItPalindrome){
     let palindromeTextArea = document.querySelector('#palindrome-textarea');
-    palindromeTextArea.value = palindromeCanditate;
+    palindromeTextArea.value = palindromeCanditate.concat('\n', palindromeTextArea.value);
   }else{
     alert("This word is not a palindrome");
   }
