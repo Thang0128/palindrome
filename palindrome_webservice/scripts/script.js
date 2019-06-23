@@ -20,4 +20,3 @@ form.addEventListener('submit', (event) => {
   }else{
     alert("This word is not a palindrome");
   }
-});
